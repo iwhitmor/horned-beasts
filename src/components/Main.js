@@ -3,6 +3,9 @@ import HornedBeast from './HornedBeast';
 import data from '../data/data.json'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
