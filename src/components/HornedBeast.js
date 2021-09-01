@@ -25,8 +25,8 @@ class HornedBeast extends React.Component {
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
               {this.props.description}
-              </Card.Text> 
-              {this.state.imageVotes}
+            </Card.Text>
+            {this.state.imageVotes}
           </Card.Body>
         </Card>
       </div>
