@@ -1,16 +1,17 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       imageVotes: '',
     };
   }
 
   addimageVotesClickHandler = () => {
-    this.setState( {
+    this.setState({
       imageVotes: this.state.imageVotes + '🖤 '
     })
   };
@@ -18,13 +19,19 @@ class HornedBeast extends React.Component {
   render() {
     return (
       <div>
-        <h2>{this.props.title}</h2>
-        <img onClick={this.addimageVotesClickHandler} title={this.props.title} src={this.props.image} alt={this.props.alt} />
-        <p>{this.props.description}</p>
-        <p>{this.state.imageVotes}</p>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img onClick={this.addimageVotesClickHandler} title={this.props.title} src={this.props.image} alt={this.props.alt} />
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>
+              {this.props.description}
+              </Card.Text> 
+              {this.state.imageVotes}
+          </Card.Body>
+        </Card>
       </div>
     )
-  }
+  };
 }
 
 export default HornedBeast;
