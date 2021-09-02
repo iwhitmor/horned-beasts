@@ -1,5 +1,4 @@
 import React from 'react';
-import { CardColumns } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
@@ -19,8 +18,7 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <div>
-        <CardColumns style={{ width: '25rem' }}>
+          <Card>
           <Card.Img onClick={this.addimageVotesClickHandler} title={this.props.title} src={this.props.image} alt={this.props.alt} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
@@ -29,8 +27,7 @@ class HornedBeast extends React.Component {
             </Card.Text>
             {this.state.imageVotes}
           </Card.Body>
-        </CardColumns>
-      </div>
+          </Card> 
     )
   };
 }
