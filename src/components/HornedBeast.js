@@ -13,14 +13,20 @@ class HornedBeast extends React.Component {
   handleCardClick = () => {
     let currentVotes = this.state.imageVotes;
     this.setState({ imageVotes: currentVotes + 1 })
+  }
 
-  };
+  showModal = (event) => {
+    event.stopPropagation()
+    this.props.displayModalForIndex(this.props.beastIndex);
+  }
 
   render() {
     return (
-      <Card>
+      <Card
+        onClick={this.handleCardClick} >
         <Card.Body>
-          <Card.Img onClick={this.handleCardClick} title={this.props.title} src={this.props.image} alt={this.props.alt} />
+          <Card.Img  title={this.props.title} src={this.props.image} alt={this.props.alt}
+          onClick={this.showModal} />
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
             😍 = {this.state.imageVotes}
