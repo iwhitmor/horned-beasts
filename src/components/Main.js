@@ -8,7 +8,7 @@ class Main extends React.Component {
   render() {
     return (
       <CardColumns>
-        {data.map(beast => (<HornedBeast displayModalForIndex={this.props.handleSelectBeast} title={beast.title} image={beast.image_url} description={beast.description} />))}
+        {data.map((beast, i) => (<HornedBeast beastIndex={i} displayModalForIndex={this.props.handleSelectBeast} title={beast.title} image={beast.image_url} description={beast.description} />))}
       </CardColumns>
     )
   };
