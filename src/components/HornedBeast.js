@@ -25,7 +25,7 @@ class HornedBeast extends React.Component {
             <Card.Text>
               {this.props.description}
             </Card.Text>
-            ❤️ = {this.state.imageVotes}
+          😍 = {this.state.imageVotes}
           </Card.Body>
           </Card> 
     )
