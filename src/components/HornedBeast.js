@@ -12,22 +12,22 @@ class HornedBeast extends React.Component {
 
   handleCardClick = () => {
     let currentVotes = this.state.imageVotes;
-    this.setState({imageVotes: currentVotes + 1})
-    
+    this.setState({ imageVotes: currentVotes + 1 })
+
   };
 
   render() {
     return (
-          <Card style={{ width: '18rem' }}>
+      <Card>
+        <Card.Body>
           <Card.Img onClick={this.handleCardClick} title={this.props.title} src={this.props.image} alt={this.props.alt} />
-          <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>
-              {this.props.description}
-            </Card.Text>
-          😍 = {this.state.imageVotes}
-          </Card.Body>
-          </Card> 
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>
+            😍 = {this.state.imageVotes}
+          </Card.Text>
+          {this.props.description}
+        </Card.Body>
+      </Card>
     )
   };
 };
