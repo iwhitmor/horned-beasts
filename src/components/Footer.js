@@ -1,11 +1,13 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 
 class Footer extends React.Component {
   render() {
     return(
       <footer>
-        <h2>Created by Ian Whitmore</h2>
-        <h3>Thanks for visiting my site</h3>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand>Author: Ian Whitmore</Navbar.Brand>
+        </Navbar>
       </footer>
     )}
   }

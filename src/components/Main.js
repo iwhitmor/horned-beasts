@@ -1,13 +1,15 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import data from '../data/data.json'
+import CardColumns from 'react-bootstrap/CardColumns';
+
 
 class Main extends React.Component {
   render() {
     return (
-      <div>
-        {data.map(beast => (<HornedBeast title={beast.title} image={beast.image_url} description={beast.description} />))}
-      </div>
+      <CardColumns>
+        {data.map((beast, i) => (<HornedBeast beastIndex={i} displayModalForIndex={this.props.handleSelectBeast} title={beast.title} image={beast.image_url} description={beast.description} />))}
+      </CardColumns>
     )
   };
 }
