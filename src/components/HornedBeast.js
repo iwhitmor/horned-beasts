@@ -24,18 +24,15 @@ class HornedBeast extends React.Component {
     return (
       <Card
         onClick={this.handleCardClick} >
-        <Card.Body>
-          <Card.Img  title={this.props.title} src={this.props.image} alt={this.props.alt}
-          onClick={this.showModal} />
+          <Card.Img variant="top" src={this.props.image} onClick={this.showModal} />
+          <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>
-            😍 = {this.state.imageVotes}
-          </Card.Text>
-          {this.props.description}
+          <Card.Text>😍 = {this.state.imageVotes}</Card.Text>
+          <Card.Text>{this.props.description}</Card.Text>
         </Card.Body>
       </Card>
     )
   };
 };
- 
+
 export default HornedBeast;
